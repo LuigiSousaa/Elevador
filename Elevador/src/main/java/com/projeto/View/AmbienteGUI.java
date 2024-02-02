@@ -32,16 +32,16 @@ public class AmbienteGUI extends JFrame {
         panel.setLayout(new GridLayout(9, 3));
 
         // Iterando sobre as linhas e colunas
-        for (int i = 9; i >= 1; i--) {
-                String nomeArquivo = "Andar" + i + ".png";
-                ImageIcon andarIcon = new ImageIcon("resources/" + nomeArquivo);
-    
+        for (int i = 9; i >= 1; i--) {    
                 JLabel elevadorEsquerda = new JLabel(new ImageIcon(fechadasIcon.getImage().getScaledInstance(80, 60, Image.SCALE_SMOOTH)));
-                JButton chamarButton = new JButton(andarIcon);
+                JButton chamarButton = new JButton(botaoIcon);
                 chamarButton.setContentAreaFilled(false);
                 chamarButton.setBorderPainted(false);
                 chamarButton.setFocusPainted(false);
                 chamarButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+                chamarButton.setPreferredSize(new Dimension(50, 40));
+
                 JLabel elevadorDireita = new JLabel(new ImageIcon(fechadasIcon.getImage().getScaledInstance(80, 60, Image.SCALE_SMOOTH)));
 
             panel.add(elevadorEsquerda);
